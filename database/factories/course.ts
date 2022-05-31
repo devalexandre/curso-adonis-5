@@ -7,7 +7,7 @@ export const CourseFactory = Factory
   
     return {
       title: faker.lorem.word(10),
-      description: faker.lorem.word(50),
+      description: faker.lorem.words(40),
       thumbnail: faker.image.avatar()
     }
 

@@ -21,10 +21,10 @@ export default class Course extends BaseModel {
   @column()
   development_path_id: number;
 
-  @belongsTo(() => DevelopmentPath, {foreignKey: 'development_path_id'})
+  @belongsTo(() => DevelopmentPath, {foreignKey: 'development_path_id', localKey: 'id'})
   public development_path: BelongsTo<typeof DevelopmentPath>
 
-  @hasMany(() => Week, {foreignKey: 'course_id'})
+  @hasMany(() => Week, {foreignKey: 'course_id', localKey: 'id'})
   public week: HasMany<typeof Week>
 
   @column.dateTime({ autoCreate: true })
