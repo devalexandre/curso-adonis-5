@@ -4,6 +4,8 @@ import DevelopmentPath from './DevelopmentPath'
 import Week from './Week'
 
 export default class Course extends BaseModel {
+ 
+
   @column({ isPrimary: true })
   public id: number
 
@@ -23,7 +25,7 @@ export default class Course extends BaseModel {
   public development_path: BelongsTo<typeof DevelopmentPath>
 
   @hasMany(() => Week, {foreignKey: 'course_id'})
-  public weeks: HasMany<typeof Week>
+  public week: HasMany<typeof Week>
 
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime
