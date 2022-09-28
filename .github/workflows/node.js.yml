@@ -37,5 +37,8 @@ jobs:
       env:
         APP_KEY: vWum_9TzzUl_jPpNGXYgnVODEcZ7dSUA
         DRIVE_DISK: local
+        DB_CONNECTION: mysql
+        MYSQL_HOST: localhost
+        MYSQL_PORT: 3306
 
 
