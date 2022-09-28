@@ -6,3 +6,10 @@ test('display welcome page', async ({ client }) => {
   response.assertStatus(200)
   response.assertBodyContains({ hello: 'world' })
 })
+
+test('display welcome page', async ({ client }) => {
+  const response = await client.get('/hi')
+
+  response.assertStatus(200)
+  response.assertBodyContains({ hello: 'hello' })
+})
