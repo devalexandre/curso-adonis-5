@@ -36,4 +36,6 @@ jobs:
     - run: sprkl -- npm test
       env:
         APP_KEY: vWum_9TzzUl_jPpNGXYgnVODEcZ7dSUA
+        DRIVE_DISK: local
+
 
